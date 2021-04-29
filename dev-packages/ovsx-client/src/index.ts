@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (C) 2020 Ericsson and others.
+ * Copyright (C) 2021 Ericsson and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -14,15 +14,5 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 
-import { injectable } from '@theia/core/shared/inversify';
-import { VSXApiVersionProvider } from '../common/vsx-api-version-provider';
-import { VSCODE_DEFAULT_API_VERSION } from '@theia/plugin-ext-vscode/lib/common/plugin-vscode-types';
-
-@injectable()
-export class VSXApiVersionProviderImpl implements VSXApiVersionProvider {
-
-    getApiVersion(): string {
-        return process.env['VSCODE_API_VERSION'] || VSCODE_DEFAULT_API_VERSION;
-    }
-
-}
+export * from './ovsx-client';
+export * from './ovsx-types';
